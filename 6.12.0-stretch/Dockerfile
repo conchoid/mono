@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 # Preset locale to en_US.UTF-8
 # https://docs.docker.com/samples/library/debian/#locales
@@ -9,8 +9,8 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN apt update && \
-    apt install -y curl apt-transport-https gnupg1 && \
+    apt install -y curl apt-transport-https dirmngr gnupg ca-certificates && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-    (echo "deb https://download.mono-project.com/repo/debian stable-stretch/snapshots/5.18.1 main" | tee /etc/apt/sources.list.d/mono-official-stable.list) && \
+    (echo "deb https://download.mono-project.com/repo/debian stable-stretch/snapshots/6.12.0 main" | tee /etc/apt/sources.list.d/mono-official-stable.list) && \
     apt update && \
-    apt install -y mono-complete="5.18.1.3-0xamarin3+debian9b1" git="1:2.11.0-3+deb9u7"
+    apt install -y mono-complete="6.12.0.122-0xamarin1+debian9b1" git
