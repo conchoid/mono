@@ -1,3 +1,4 @@
+# Docker Hub: conchoid/mono:v6.12.0-1-trixie
 FROM debian:trixie-slim
 
 # Preset locale to en_US.UTF-8
