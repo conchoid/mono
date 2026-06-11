@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mono Base Image Update"
+  short_description: "mono の Debian 系更新手順"
+  default_prompt: "Use $mono-base-image-update to update mono Dockerfiles for a new Debian release and re-check the Mono repository setup."
+
+policy:
+  allow_implicit_invocation: true
