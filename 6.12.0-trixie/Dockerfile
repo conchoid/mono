@@ -1,4 +1,5 @@
 # Docker Hub: conchoid/mono:v6.12.0-1-trixie
+# Docker Hub: conchoid/mono:v6.12.0-1-trixie-arm64
 FROM debian:trixie-slim
 
 # Set environment variables
