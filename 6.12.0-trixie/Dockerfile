@@ -1,5 +1,5 @@
-# Docker Hub: conchoid/mono:v6.12.0-1-trixie
-# Docker Hub: conchoid/mono:v6.12.0-1-trixie-arm64
+# Docker Hub: conchoid/mono:v6.12.0-2-trixie
+# Docker Hub: conchoid/mono:v6.12.0-2-trixie-arm64
 FROM debian:trixie-slim
 
 # Set environment variables
@@ -17,6 +17,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     dirmngr \
     gnupg \
     ca-certificates \
+    connect-proxy \
     git && \
     # Setup locale
     localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 && \
